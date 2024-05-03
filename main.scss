@@ -1,0 +1,76 @@
+$couleur-primaire: #D0E4F1 ;
+$couleur-secondaire : #002554;
+$couleur-tertiaire: #5BC5ED;
+$font-family: Helvetica;
+
+
+
+header{
+    background-color: $couleur-secondaire;
+    color: white;
+    font-family: $font-family;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    
+    #logo-container{
+        height:40px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: white solid;
+        #logo{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid $couleur-tertiaire;
+        }
+    }
+
+    h1{
+        margin: 0;
+        font-size:20px;
+        margin-left: 2%;
+    }
+
+    menu{
+        width: 100%;
+
+        ul{
+            list-style-type:circle;
+            display: flex;
+            justify-content:flex-end;
+            align-items:center;
+            li{
+                font-size: 14px;
+                margin-right: 6%;
+
+                &:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+
+        h2{
+            color: $couleur-tertiaire;
+            margin-bottom: 30px;
+        }
+    }
+
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Oceanogram</title>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <div id="logo"></div>
+        </div>
+        <h1>Oceanogram</h1>
+        <menu>
+            <ul>
+                <li>Océanogramme</li>
+                <li>Horaires des marées</li>
+                <li>Archives des marées</li>
+            </ul>
+        </menu>
+        
+    </header>
+    <main>
+        <div id="maregraphesList"></div>
+        <section id="archives-des-marées">
+            <h2>Archives des marées</h2>
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+        </section>
+        <section id="oceanogramme">
+            <h2>Océnogramme</h2>
+            <script src="https://services.data.shom.fr/oceano/render/widget?duration=4&delta-date=0&spot=LE_CONQUET&utc=1&lang=fr&width=1500&height=1000"></script>
+        </section>
+        <section id="horaires-des-marées">
+            <h2>Horaires des marées</h2>
+            <script src="https://services.data.shom.fr/hdm/vignette/grande/BREST?locale=fr"></script>            
+        </section>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
