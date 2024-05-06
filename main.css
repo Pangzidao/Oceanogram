@@ -49,6 +49,21 @@ main {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
 }
+main .hidden {
+  height: 0px;
+}
+main #maregraphesList {
+  border: #002554 solid;
+  overflow: hidden;
+}
+main #maregraphesList .maregraphe-name {
+  color: #5BC5ED;
+  font-size: small;
+}
+main #maregraphesList .maregraphe-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 main section {
   display: flex;
   flex-direction: column;

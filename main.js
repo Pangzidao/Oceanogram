@@ -18,7 +18,6 @@ function getMaregraphesObservations(){
   })
   .then(data => {
     // Handle the JSON data returned by the API
-    console.log(data);
     drawDiagram(data.data)
     // Perform further processing or display the data on the webpage
   })
@@ -85,11 +84,26 @@ function getMaregraphes(){
     });
 }
 
+const toggleButton = document.getElementById("toggleButton");
+
+toggleButton.addEventListener("click", function() {
+  maregraphesListDom.classList.toggle("hidden");
+});
+
 function makeMaregraphesList(maregraphesList){
   maregraphesList.forEach(maregraphe => {
-    maregraphesListDom.innerHTML += `<p class="maregraphe-name"> ${maregraphe.name}</p>`
-    console.log(maregraphe.name)
-  })
+    const p = document.createElement('p');
+    p.textContent = maregraphe.name;
+    p.classList.add('maregraphe-name');
+    p.addEventListener('click', function() {
+      maregrapheClick(maregraphe.name);
+    });
+    maregraphesListDom.appendChild(p);
+  });
+}
+
+function maregrapheClick(maregrapheName){
+  console.log(maregrapheName); // You can do whatever you want with the maregrapheName variable here
 }
 
 getMaregraphes()
